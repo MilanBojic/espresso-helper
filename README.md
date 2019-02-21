@@ -38,12 +38,14 @@ This will run the app on your device. You may need to download a newer version o
 
 In order to use Espresso Helper, you need to add dependency in your build.gradle
 
-androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2',{
+**androidTestImplementation** 'com.android.support.test.espresso:espresso-core:3.0.2',{
+
         exclude group: 'com.android.support', module: 'recyclerview-v7'
 }
 
-androidTestImplementation 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
-implementation 'com.android.support:recyclerview-v7:+'
+**androidTestImplementation** 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
+
+**implementation** 'com.android.support:recyclerview-v7:+'
 
 
 
