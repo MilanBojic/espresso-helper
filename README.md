@@ -66,7 +66,7 @@ In order to use Espresso Helper, you need to add dependency in your build.gradle
 
 **We could just write:**
 
-         *assertViewId(id:Int)*
+         assertViewId(id:Int)
 
 **What if we want to handle click on view?**
 
