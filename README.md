@@ -2,8 +2,9 @@
 
 ## What is this?
 
-Espresso helper is powerful wrapper which it make easy to write UI android test.
+Espresso helper is powerful wrapper which it make easy to write UI android test. You can simplify your test code just like I mentioned here in this article! You might still need a few additional util functions, but it’s a start!
 
+    
 ## Requirements
 
 Android 5.0 or later (Minimum SDK level 21)
@@ -48,6 +49,40 @@ In order to use Espresso Helper, you need to add dependency in your build.gradle
 **androidTestImplementation** *'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'*
 
 **implementation** '*com.android.support:recyclerview-v7:+'*
+
+
+## Example:
+**What if we want to check if a view is visible on the screen?**
+
+          *Espresso.onView(
+
+                    CoreMatchers.allOf(
+
+                        ViewMatchers.withId(id),
+
+                        ViewMatchers.withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
+
+                        .check(ViewAssertions.matches(ViewMatchers.isDisplayed())*
+
+**We could just write:**
+
+         *assertViewId(id:Int)*
+
+**What if we want to handle click on view?**
+
+          Espresso.onView(CoreMatchers.allOf<View>(
+
+                        ViewMatchers.withId(id), ViewMatchers.withParent(CoreMatchers.allOf<View>
+
+                                (ViewMatchers.withParent(ViewMatchers.withId(parent)), 
+
+                                ViewMatchers.isDisplayed())))).perform(ViewActions.click())
+
+        
+**We could just write**      
+  
+         clickIdWithParent(id: Int, parent: Int)
+
 
 
 
