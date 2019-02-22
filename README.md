@@ -3,7 +3,9 @@
 ## What is this?
 
 In fact, I started working on the library because I felt it was a bit too verbose to start out with Espresso. Checking simple things should be simple, no?
+
 Espresso helper is powerful wrapper which it make easy to write UI android test. 
+
 You might still need a few additional util functions, but it’s a start!
 
     
