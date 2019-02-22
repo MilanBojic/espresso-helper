@@ -54,7 +54,7 @@ In order to use Espresso Helper, you need to add dependency in your build.gradle
 ## Example:
 **What if we want to check if a view is visible on the screen?**
 
-          *Espresso.onView(
+          Espresso.onView(
 
                     CoreMatchers.allOf(
 
@@ -62,7 +62,7 @@ In order to use Espresso Helper, you need to add dependency in your build.gradle
 
                         ViewMatchers.withEffectiveVisibility(ViewMatchers.Visibility.VISIBLE)))
 
-                        .check(ViewAssertions.matches(ViewMatchers.isDisplayed())*
+                        .check(ViewAssertions.matches(ViewMatchers.isDisplayed())
 
 **We could just write:**
 
